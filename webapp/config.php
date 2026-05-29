@@ -64,7 +64,7 @@ define('OKTA_SAML', [
 
     // From Okta: "View SAML setup instructions" → X.509 Certificate
     // Paste ONLY the base64 content between -----BEGIN/END CERTIFICATE-----
-    'idp_x509_cert'       => ''
+    'idp_x509_cert'       => '',
   
     // ── Role mapping ─────────────────────────────────────────────
     // Map Okta group names to ThreatScope roles.
