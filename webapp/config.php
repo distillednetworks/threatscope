@@ -85,8 +85,8 @@ define('OKTA_SAML', [
     'attr_groups'         => 'groups',
 
     // ── Security settings ────────────────────────────────────────
-    'strict'              => false,   // Set false ONLY during initial testing
-    'debug'               => true,  // Set true temporarily to diagnose SAML errors
+    'strict'              => true,   // Set false ONLY during initial testing
+    'debug'               => false,  // Set true temporarily to diagnose SAML errors
 
     // Whether to sign AuthN requests sent to Okta
     // Requires SP private key + certificate configured below
