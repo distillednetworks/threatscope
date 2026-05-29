@@ -9,7 +9,7 @@ services:
 
     environment:
       # Apache server name — set to your actual domain in production
-      APACHE_SERVER_NAME: <FQDN>
+      APACHE_SERVER_NAME: localhost
 
     ports:
       - 80:80
