@@ -1,0 +1,17 @@
+{
+    "name": "threatscope/portal",
+    "description": "ThreatScope Threat Intelligence Portal",
+    "require": {
+        "php": ">=8.1",
+        "onelogin/php-saml": "^4.1"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist"
+    },
+    "autoload": {
+        "psr-4": {
+            "ThreatScope\\": "src/"
+        }
+    }
+}

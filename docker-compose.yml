@@ -1,0 +1,32 @@
+services:
+  threatscope:
+    build: .
+    container_name: threatscope
+    restart: unless-stopped
+
+    volumes:
+      - threatscope-data:/var/www/html/data
+
+    environment:
+      # Apache server name — set to your actual domain in production
+      APACHE_SERVER_NAME: <FQDN>
+
+    ports:
+      - 80:80
+
+    networks:
+      - threatscope
+
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost/api/health.php"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+volumes:
+  threatscope-data:
+
+networks:
+  threatscope:
+    external: true
