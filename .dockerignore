@@ -1,0 +1,35 @@
+# ============================================================
+#  ThreatScope — .dockerignore
+#  Prevents these files from being sent to the Docker daemon
+#  during build — keeps the build context small and avoids
+#  accidentally baking secrets into the image.
+# ============================================================
+
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# Local development
+.env
+.env.*
+docker-compose.override.yml
+
+# Documentation — not needed at runtime
+*.md
+OKTA_SETUP.md
+COMPOSER_TROUBLESHOOTING.md
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# PHP logs
+*.log
+
+# Compiled assets (if you add a build step later)
+node_modules/
